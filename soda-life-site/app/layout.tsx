@@ -27,7 +27,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fredoka.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fredoka.variable} ${inter.variable} scroll-smooth`}>
       <body className="bg-cream font-body text-gray-900 antialiased min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>

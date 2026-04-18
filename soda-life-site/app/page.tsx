@@ -1,101 +1,83 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <section
+      id="top"
+      aria-labelledby="hero-heading"
+      className="relative overflow-hidden bg-cream"
+    >
+      {/* Decorative bubbles (pure CSS, no red) */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -left-10 top-16 h-40 w-40 rounded-full bg-sodaBlue/25 blur-2xl"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute right-10 top-40 h-24 w-24 rounded-full bg-sodaPink/30 blur-xl"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -right-16 bottom-20 h-56 w-56 rounded-full bg-sodaGreen/20 blur-3xl"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute left-1/3 bottom-10 h-16 w-16 rounded-full bg-sodaPink/40 blur-md"
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:py-36">
+        <div>
+          <span className="inline-flex items-center gap-2 rounded-full border-2 border-gray-900 bg-white px-3 py-1 font-body text-xs font-extrabold uppercase tracking-widest text-gray-900 shadow-[3px_3px_0_#111827]">
+            <span aria-hidden className="h-2 w-2 rounded-full bg-sodaPink" />
+            Payson, Utah · Pop in anytime
+          </span>
+
+          <h1
+            id="hero-heading"
+            className="mt-6 font-heading text-5xl font-bold leading-[1.02] tracking-tight text-gray-900 sm:text-6xl lg:text-7xl text-balance"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Live the{" "}
+            <span className="bg-gradient-to-r from-sodaBlue to-sodaBlue bg-clip-text text-transparent">
+              bubbly
+            </span>
+            ,<br />
+            <span className="bg-gradient-to-r from-sodaPink to-sodaPink bg-clip-text text-transparent">
+              fizzy
+            </span>{" "}
+            Soda Life.
+          </h1>
+
+          <p className="mt-5 max-w-xl font-body text-lg leading-relaxed text-gray-700 sm:text-xl">
+            Handcrafted dirty sodas, warm cookies, and four pinball machines
+            humming all day. Come thirsty. Leave hyped.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              href="#menu"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-gray-900 bg-gradient-to-r from-sodaBlue to-sodaPink px-6 py-3 font-body text-base font-extrabold text-gray-900 shadow-[4px_4px_0_#111827] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#111827] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
+            >
+              See the Menu
+              <span aria-hidden>→</span>
+            </Link>
+            <p className="font-body text-sm font-semibold text-gray-700">
+              32+ signature pours · fresh daily
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Floating soda cup — purely decorative */}
+        <div aria-hidden className="relative mx-auto hidden h-80 w-72 lg:block">
+          <div className="absolute inset-x-10 top-2 h-4 rounded-md bg-gray-900" />
+          <div className="absolute left-1/2 top-0 h-10 w-1.5 -translate-x-1/2 rounded bg-gray-900" />
+          <div className="absolute inset-x-6 top-6 bottom-0 overflow-hidden rounded-3xl border-[3px] border-gray-900 bg-white shadow-[8px_8px_0_#111827]">
+            <div className="absolute inset-x-0 bottom-0 top-[35%] bg-gradient-to-b from-sodaBlue via-sodaPink to-sodaPink" />
+            <span className="absolute left-6 top-10 h-5 w-5 rounded-full bg-white/80" />
+            <span className="absolute left-14 top-20 h-3 w-3 rounded-full bg-white/70" />
+            <span className="absolute right-8 top-16 h-4 w-4 rounded-full bg-white/60" />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
