@@ -41,6 +41,15 @@ export default function Navbar() {
             Order Now
           </Link>
         </nav>
+
+        {/* Compact mobile CTA */}
+        <Link
+          href="#menu"
+          className="inline-flex items-center gap-1 rounded-full border-2 border-gray-900 bg-gradient-to-r from-sodaBlue to-sodaPink px-3 py-1.5 font-body text-xs font-extrabold text-gray-900 shadow-[3px_3px_0_#111827] sm:hidden"
+        >
+          Menu
+          <span aria-hidden>→</span>
+        </Link>
       </div>
     </header>
   );

@@ -22,7 +22,7 @@ const challenges: Challenge[] = [
     name: "Tropical Typhoon",
     slogan: "Bring a lifejacket.",
     size: "44 oz",
-    gradient: "from-sodaPink via-fuchsia-400 to-sodaBlue",
+    gradient: "from-sodaPink via-pink-300 to-sodaBlue",
   },
   {
     name: "Rainbow Riot",

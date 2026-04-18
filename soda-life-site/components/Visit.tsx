@@ -26,7 +26,7 @@ export default function Visit() {
             Hours & Location
           </h2>
           <p className="mt-2 font-body text-base text-gray-700 sm:text-lg">
-            We're on the corner pouring something colder than your ex's heart.
+            We&rsquo;re on the corner pouring something colder than your ex&rsquo;s heart.
           </p>
         </div>
 

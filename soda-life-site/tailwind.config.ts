@@ -9,8 +9,24 @@ const config: Config = {
   theme: {
     // Brand rule: NO RED. The `red` palette is stripped from the default
     // theme so utilities like `bg-red-500` or `text-red-*` simply don't exist.
+    // Also skip deprecated Tailwind aliases without reading them, which
+    // would otherwise trigger rename warnings on every build.
     colors: ({ colors }) => {
-      const { red, ...allowed } = colors;
+      const SKIP = new Set([
+        "red",
+        "lightBlue",
+        "warmGray",
+        "trueGray",
+        "coolGray",
+        "blueGray",
+      ]);
+      const source = colors as unknown as Record<string, unknown>;
+      const allowed: Record<string, unknown> = {};
+      for (const key of Object.keys(source)) {
+        if (!SKIP.has(key)) {
+          allowed[key] = source[key];
+        }
+      }
       return {
         ...allowed,
         sodaGreen: "#4AD66D",

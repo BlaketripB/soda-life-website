@@ -28,7 +28,7 @@ const drinks: Drink[] = [
     name: "Sunset Surfer",
     description: "Sprite, peach, mango, pineapple.",
     price: "$4.75",
-    gradient: "from-orange-300 to-sodaPink",
+    gradient: "from-amber-300 to-sodaPink",
   },
   {
     name: "Pixie Fizz",
@@ -75,7 +75,7 @@ export default function Menu() {
             Tap. Sip. Smile.
           </h2>
           <p className="mt-2 font-body text-base text-gray-700 sm:text-lg">
-            Browse like you're on Google Maps — but the drinks are real.
+            Browse like you&rsquo;re on Google Maps &mdash; but the drinks are real.
           </p>
         </div>
 

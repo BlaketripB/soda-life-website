@@ -102,10 +102,10 @@ export default function Specials() {
             id="specials-heading"
             className="mt-4 font-heading text-4xl font-bold text-gray-900 sm:text-5xl"
           >
-            This Week's Specials
+            This Week&rsquo;s Specials
           </h2>
           <p className="mt-2 font-body text-base text-gray-700 sm:text-lg">
-            Rotating weekly. If it's here, it's hot — grab it before it's gone.
+            Rotating weekly. If it&rsquo;s here, it&rsquo;s hot &mdash; grab it before it&rsquo;s gone.
           </p>
         </div>
 
