@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Specials from "@/components/Specials";
 import Menu from "@/components/Menu";
+import Food from "@/components/Food";
 import Challenge from "@/components/Challenge";
 import Pinball from "@/components/Pinball";
 import Visit from "@/components/Visit";
@@ -67,7 +68,7 @@ export default function Home() {
               <span aria-hidden>→</span>
             </Link>
             <p className="font-body text-sm font-semibold text-gray-700">
-              32+ signature pours · fresh daily
+              150+ drinks · fresh daily
             </p>
           </div>
         </div>
@@ -88,6 +89,7 @@ export default function Home() {
 
     <Specials />
     <Menu />
+    <Food />
     <Challenge />
     <Pinball />
     <Visit />
