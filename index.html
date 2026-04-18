@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Soda Life &middot; Payson's Fizziest Spot</title>
+<meta name="description" content="Soda Life in Payson, Utah. Dirty sodas, cookies, pinball, and pure bubbly fun. Home of the Challenge Cup." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Pacifico&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bubble-field" aria-hidden="true">
+  <span class="bub b1"></span><span class="bub b2"></span><span class="bub b3"></span>
+  <span class="bub b4"></span><span class="bub b5"></span><span class="bub b6"></span>
+  <span class="bub b7"></span><span class="bub b8"></span><span class="bub b9"></span>
+</div>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Soda Life home">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 120 120" width="44" height="44">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#00C6FF"/>
+            <stop offset=".5" stop-color="#00E676"/>
+            <stop offset="1" stop-color="#FF4FB8"/>
+          </linearGradient>
+        </defs>
+        <circle cx="60" cy="60" r="52" fill="url(#g1)" stroke="#1A0B3B" stroke-width="6"/>
+        <circle cx="42" cy="46" r="10" fill="#ffffff" opacity=".85"/>
+        <circle cx="78" cy="54" r="6" fill="#ffffff" opacity=".7"/>
+        <circle cx="55" cy="78" r="4" fill="#ffffff" opacity=".7"/>
+      </svg>
+    </span>
+    <span class="brand-name">Soda<span class="brand-accent">Life</span></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#specials">Specials</a>
+    <a href="#menu">Menu</a>
+    <a href="#challenge">Challenge</a>
+    <a href="#pinball">Pinball</a>
+    <a href="#visit">Visit</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Payson, Utah &middot; Est. your new favorite stop</p>
+    <h1>
+      Live the <span class="grad-blue">bubbly</span>,<br/>
+      <span class="grad-green">sugary</span>,
+      <span class="grad-pink">fizzy</span> life.
+    </h1>
+    <p class="lede">Handcrafted dirty sodas, warm-from-the-oven cookies, and 4 pinball machines humming all day. Come thirsty. Leave hyped.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#menu">See the Menu</a>
+      <a class="btn btn-ghost" href="#challenge">Take the Challenge</a>
+    </div>
+    <ul class="hero-chips">
+      <li>32 signature pours</li>
+      <li>Fresh cookies daily</li>
+      <li>Zero boring drinks</li>
+    </ul>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="cup cup-pink"><span></span></div>
+    <div class="cup cup-blue"><span></span></div>
+    <div class="cup cup-green"><span></span></div>
+  </div>
+</section>
+
+<section id="specials" class="specials">
+  <div class="section-head">
+    <span class="tag tag-pink">This week only</span>
+    <h2>Specials Spotlight</h2>
+    <p>Rotating weekly. If it's here, it's hot &mdash; grab it before it's gone.</p>
+  </div>
+  <div class="special-grid">
+    <article class="special-card s-1">
+      <div class="special-badge">Drink of the Week</div>
+      <h3>Cotton Candy Cloud</h3>
+      <p>Sprite + cotton candy syrup + vanilla cream + a blue raspberry drizzle. Fluffy, dreamy, pure magic.</p>
+      <div class="special-foot"><span class="price">$5.25</span><span class="size">32oz</span></div>
+    </article>
+    <article class="special-card s-2">
+      <div class="special-badge">Cookie Drop</div>
+      <h3>Mint Chip Monster</h3>
+      <p>Fresh-baked mint cookie stuffed with chocolate chunks. Served warm. Try it as a float.</p>
+      <div class="special-foot"><span class="price">$3.50</span><span class="size">each</span></div>
+    </article>
+    <article class="special-card s-3">
+      <div class="special-badge">Combo Deal</div>
+      <h3>After-School Fizz</h3>
+      <p>Any 24oz dirty soda + 1 cookie, weekdays 2p-5p. The snack attack fixer.</p>
+      <div class="special-foot"><span class="price">$7.00</span><span class="size">2p-5p</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <div class="section-head">
+    <span class="tag tag-blue">The Menu</span>
+    <h2>Tap. Sip. Smile.</h2>
+    <p>Browse like you're on Google Maps &mdash; but the drinks are real.</p>
+  </div>
+
+  <div class="menu-tabs" role="tablist">
+    <button class="tab active" data-filter="all">All</button>
+    <button class="tab" data-filter="signature">Signature Sodas</button>
+    <button class="tab" data-filter="creamy">Cream Pours</button>
+    <button class="tab" data-filter="zero">Zero Sugar</button>
+    <button class="tab" data-filter="treats">Treats</button>
+  </div>
+
+  <div class="menu-grid" id="menuGrid">
+    <!-- Cards injected by script.js -->
+  </div>
+</section>
+
+<section id="challenge" class="challenge">
+  <div class="section-head on-dark">
+    <span class="tag tag-green">Dare ya</span>
+    <h2>The Challenge Cups</h2>
+    <p>Big pours. Bold names. Bragging rights.</p>
+  </div>
+  <div class="challenge-grid">
+    <article class="ch-card">
+      <div class="ch-size">64oz</div>
+      <h3>The Tsunami</h3>
+      <p>Six flavors, one epic wave. Finish it in one sitting and your name goes on the board.</p>
+      <ul class="ch-perks">
+        <li>Free sticker</li><li>Wall of Fame photo</li><li>Next drink 50% off</li>
+      </ul>
+    </article>
+    <article class="ch-card">
+      <div class="ch-size">44oz</div>
+      <h3>Pinball Wizard</h3>
+      <p>Mystery mix chosen by the barista. You don't know what's in it. That's the point.</p>
+      <ul class="ch-perks">
+        <li>Guess 3 flavors = free cookie</li><li>New mix every Friday</li>
+      </ul>
+    </article>
+    <article class="ch-card">
+      <div class="ch-size">32oz</div>
+      <h3>Final Boss</h3>
+      <p>Extra-sour, extra-bold, extra everything. Not for rookies. Please hydrate first.</p>
+      <ul class="ch-perks">
+        <li>Limit 1 per customer</li><li>Challenge pin reward</li>
+      </ul>
+    </article>
+    <article class="ch-card">
+      <div class="ch-size">Team</div>
+      <h3>Squad Surge</h3>
+      <p>A shareable 96oz pitcher + 4 cups. Perfect for post-practice, post-dance, post-anything.</p>
+      <ul class="ch-perks">
+        <li>Pick any 3 flavors</li><li>Free pretzel bites</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="pinball" class="pinball">
+  <div class="section-head">
+    <span class="tag tag-pink">Play while you sip</span>
+    <h2>Pinball Lineup</h2>
+    <p>Four machines. Free high-five when you beat the high score.</p>
+  </div>
+  <div class="pin-grid">
+    <div class="pin-card"><div class="pin-emoji">PRO</div><h4>John Wick</h4><p>Stern Pro</p></div>
+    <div class="pin-card"><div class="pin-emoji">PRO</div><h4>The Mandalorian</h4><p>Stern Pro</p></div>
+    <div class="pin-card"><div class="pin-emoji">PRO</div><h4>Stranger Things</h4><p>Stern Pro</p></div>
+    <div class="pin-card"><div class="pin-emoji">PRO</div><h4>TMNT</h4><p>Stern Pro</p></div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="section-head">
+    <span class="tag tag-blue">Come see us</span>
+    <h2>Find the Fizz</h2>
+    <p>We're on the corner pouring something colder than your ex's heart.</p>
+  </div>
+  <div class="visit-grid">
+    <div class="visit-info">
+      <h3>Hours</h3>
+      <ul class="hours">
+        <li><span>Mon &ndash; Fri</span><span>8:00a &ndash; 9:00p</span></li>
+        <li><span>Saturday</span><span>9:00a &ndash; 9:00p</span></li>
+        <li><span>Sunday</span><span>10:00a &ndash; 7:00p</span></li>
+      </ul>
+      <h3>Address</h3>
+      <p class="addr">742 S HWY 198, Unit 5<br/>Payson, UT</p>
+      <div class="visit-ctas">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/Soda+Life+742+S+HWY+198+Payson+UT" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/soda_life_payson/" target="_blank" rel="noopener">Follow on Instagram</a>
+      </div>
+    </div>
+    <div class="visit-map" aria-label="Map of Soda Life Payson">
+      <iframe
+        title="Soda Life on Google Maps"
+        src="https://www.google.com/maps?q=742+S+HWY+198+Payson+UT&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <span class="brand-name">Soda<span class="brand-accent">Life</span></span>
+      <p>Bubbles on bubbles on bubbles.</p>
+    </div>
+    <div class="foot-links">
+      <a href="#menu">Menu</a>
+      <a href="#specials">Specials</a>
+      <a href="#challenge">Challenge</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <p class="foot-fine">&copy; <span id="yr"></span> Soda Life Payson &middot; Every cup made with love, ice, and a little chaos.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
