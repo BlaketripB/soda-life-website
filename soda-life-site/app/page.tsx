@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
+    <>
     <section
       id="top"
       aria-labelledby="hero-heading"
@@ -79,5 +81,8 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    <Menu />
+    </>
   );
 }
