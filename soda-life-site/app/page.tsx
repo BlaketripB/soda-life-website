@@ -2,6 +2,8 @@ import Link from "next/link";
 import Specials from "@/components/Specials";
 import Menu from "@/components/Menu";
 import Challenge from "@/components/Challenge";
+import Pinball from "@/components/Pinball";
+import Visit from "@/components/Visit";
 
 export default function Home() {
   return (
@@ -87,6 +89,8 @@ export default function Home() {
     <Specials />
     <Menu />
     <Challenge />
+    <Pinball />
+    <Visit />
     </>
   );
 }
