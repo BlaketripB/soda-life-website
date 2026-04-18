@@ -1,63 +1,79 @@
 /**
- * Weekly specials content.
+ * Weekly specials spotlight.
  *
- * To update the specials each week, edit the SPECIALS object below.
+ * Pulls real drinks from the Soda Life menu (see app/menu-data.ts for the
+ * full catalog) and features a rotating selection each week.
+ *
+ * To rotate the specials, edit the SPECIALS object below.
  *  - `feature` is the single big card at the top of the section.
- *  - `more` is the array of three smaller cards shown beneath it.
+ *  - `more` is the array of three smaller cards beneath it.
  *    Keep the array at exactly three items so the grid stays balanced.
  *
  * Each card supports:
  *   label        short kicker shown above the title ("Drink of the Week")
- *   title        the special's name
- *   description  one or two sentences describing the special
- *   price        formatted price string (e.g. "$5.25")
- *   meta         small detail shown next to the price ("32 oz", "2p-5p")
- *   accent       which brand color drives the card: "pink" | "blue" | "green"
+ *   title        the drink name (should match the menu exactly)
+ *   base         optional — the base soda ("Alani", "Sprite", "Kids Menu")
+ *   description  one or two sentences describing the drink
+ *   price        optional — only the Kids Menu currently has posted prices;
+ *                leave undefined for everything else
+ *   meta         small detail chip ("serves 4", "32 oz", "Alani base")
+ *   accent       brand color for the card: "pink" | "blue" | "green"
  *
- * No image/CMS needed — just save the file and redeploy.
+ * Save this file and redeploy — no CMS needed.
  */
-const SPECIALS = {
+type Accent = "pink" | "blue" | "green";
+
+type Special = {
+  label: string;
+  title: string;
+  base?: string;
+  description: string;
+  price?: string;
+  meta: string;
+  accent: Accent;
+};
+
+const SPECIALS: { feature: Special; more: [Special, Special, Special] } = {
   feature: {
     label: "Drink of the Week",
-    title: "Cotton Candy Cloud",
+    title: "Cloud 9",
+    base: "Alani",
     description:
-      "Sprite, cotton candy syrup, vanilla cream, and a blue raspberry drizzle. Fluffy, dreamy, pure magic in a cup.",
-    price: "$5.25",
-    meta: "32 oz",
-    accent: "pink" as const,
+      "Cotton candy, blue raspberry, more cotton candy, coconut cream, and Sprite. Fluffy, dreamy, pure magic in a cup.",
+    meta: "Alani base",
+    accent: "pink",
   },
   more: [
     {
-      label: "Cookie Drop",
-      title: "Mint Chip Monster",
+      label: "Staff Pick",
+      title: "Sherbert Storm",
+      base: "Blue Slush Alani",
       description:
-        "Fresh-baked mint cookie stuffed with chocolate chunks. Served warm. Try it as a float.",
-      price: "$3.50",
-      meta: "each",
-      accent: "green" as const,
+        "Coconut, blue raspberry, half & half creamer, Mtn Dew Voltage. Cold front in a cup.",
+      meta: "Alani base",
+      accent: "blue",
     },
     {
-      label: "Combo Deal",
-      title: "After-School Fizz",
+      label: "Fan Favorite",
+      title: "Mardigra",
+      base: "Sprite",
       description:
-        "Any 24 oz dirty soda plus one cookie, weekdays 2p–5p. The snack attack fixer.",
-      price: "$7.00",
-      meta: "2p–5p",
-      accent: "blue" as const,
+        "Tigers blood and coconut cream over ice-cold Sprite. Loud. Bright. Loved.",
+      meta: "Sprite base",
+      accent: "pink",
     },
     {
-      label: "Squad Move",
-      title: "Pitcher Party",
+      label: "Kids' Pick",
+      title: "Blue Ocean",
+      base: "Sprite",
       description:
-        "96 oz shareable pitcher, pick any three flavors. Perfect after practice or dance.",
-      price: "$14.00",
-      meta: "serves 4",
-      accent: "pink" as const,
+        "Sprite, blue razz, and sea life gummies. Served in a kids cup with a wave of fun.",
+      price: "$3.19",
+      meta: "Kids Menu",
+      accent: "green",
     },
   ],
 };
-
-type Accent = "pink" | "blue" | "green";
 
 const accentStyles: Record<
   Accent,
@@ -105,7 +121,7 @@ export default function Specials() {
             This Week&rsquo;s Specials
           </h2>
           <p className="mt-2 font-body text-base text-gray-700 sm:text-lg">
-            Rotating weekly. If it&rsquo;s here, it&rsquo;s hot &mdash; grab it before it&rsquo;s gone.
+            Hand-picked from the menu. Rotates every Monday.
           </p>
         </div>
 
@@ -128,18 +144,25 @@ export default function Specials() {
               >
                 ★ {feature.label}
               </span>
-              <h3 className="font-heading text-3xl font-bold text-gray-900 sm:text-4xl">
-                {feature.title}
-              </h3>
+              <div>
+                <h3 className="font-heading text-3xl font-bold text-gray-900 sm:text-4xl">
+                  {feature.title}
+                </h3>
+                {feature.base && (
+                  <p className="mt-1 font-body text-xs font-extrabold uppercase tracking-widest text-gray-500">
+                    {feature.base}
+                  </p>
+                )}
+              </div>
               <p className="font-body text-base text-gray-700 sm:text-lg">
                 {feature.description}
               </p>
               <div className="mt-2 flex items-baseline gap-3">
-                <span
-                  className={`font-heading text-3xl font-bold ${f.price}`}
-                >
-                  {feature.price}
-                </span>
+                {feature.price && (
+                  <span className={`font-heading text-3xl font-bold ${f.price}`}>
+                    {feature.price}
+                  </span>
+                )}
                 <span className="font-body text-sm font-semibold text-gray-500">
                   {feature.meta}
                 </span>
@@ -149,10 +172,7 @@ export default function Specials() {
         </article>
 
         {/* Three smaller cards */}
-        <ul
-          role="list"
-          className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3"
-        >
+        <ul role="list" className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
           {more.map((special) => {
             const a = accentStyles[special.accent];
             return (
@@ -172,13 +192,22 @@ export default function Specials() {
                   <h3 className="mt-3 font-heading text-xl font-bold text-gray-900">
                     {special.title}
                   </h3>
+                  {special.base && (
+                    <p className="font-body text-[11px] font-extrabold uppercase tracking-widest text-gray-500">
+                      {special.base}
+                    </p>
+                  )}
                   <p className="mt-1 font-body text-sm text-gray-600">
                     {special.description}
                   </p>
                   <div className="mt-auto flex items-baseline justify-between pt-4">
-                    <span className={`font-heading text-xl font-bold ${a.price}`}>
-                      {special.price}
-                    </span>
+                    {special.price ? (
+                      <span className={`font-heading text-xl font-bold ${a.price}`}>
+                        {special.price}
+                      </span>
+                    ) : (
+                      <span />
+                    )}
                     <span className="font-body text-xs font-semibold text-gray-500">
                       {special.meta}
                     </span>
