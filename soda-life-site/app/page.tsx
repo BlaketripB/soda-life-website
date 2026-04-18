@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Menu from "@/components/Menu";
+import Challenge from "@/components/Challenge";
 
 export default function Home() {
   return (
@@ -83,6 +84,7 @@ export default function Home() {
     </section>
 
     <Menu />
+    <Challenge />
     </>
   );
 }
