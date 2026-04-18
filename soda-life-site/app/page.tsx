@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Specials from "@/components/Specials";
 import Menu from "@/components/Menu";
 import Challenge from "@/components/Challenge";
 
@@ -83,6 +84,7 @@ export default function Home() {
       </div>
     </section>
 
+    <Specials />
     <Menu />
     <Challenge />
     </>
