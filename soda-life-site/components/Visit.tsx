@@ -4,8 +4,8 @@ const hours = [
   { day: "Sunday", time: "10:00a – 7:00p" },
 ];
 
-const ADDRESS = "742 S HWY 198 #5, Payson, UT";
-const MAP_QUERY = encodeURIComponent("742 S HWY 198 Payson UT");
+const ADDRESS = "742 UT-198, unit 5 Payson, UT 84651";
+const MAP_QUERY = encodeURIComponent("742 UT-198, unit 5 Payson, UT 84651");
 
 export default function Visit() {
   return (
@@ -51,9 +51,9 @@ export default function Visit() {
               Address
             </h3>
             <p className="mt-2 font-body text-base font-semibold text-gray-800">
-              742 S HWY 198, Unit 5
+              742 UT-198, unit 5
               <br />
-              Payson, UT
+              Payson, UT 84651
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
