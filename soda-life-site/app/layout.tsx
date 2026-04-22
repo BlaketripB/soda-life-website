@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Soda Life — Payson's Fizziest Spot",
   description:
-    "Dirty sodas, warm cookies, and pinball in Payson, Utah. Live the Soda Life.",
+    "Dirty sodas, warm cookies, and bold fizz in Payson, Utah. Live the Soda Life.",
 };
 
 export default function RootLayout({

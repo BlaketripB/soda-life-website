@@ -4,7 +4,6 @@ import Specials from "@/components/Specials";
 import Menu from "@/components/Menu";
 import Food from "@/components/Food";
 import Challenge from "@/components/Challenge";
-import Pinball from "@/components/Pinball";
 import Visit from "@/components/Visit";
 
 export default function Home() {
@@ -52,8 +51,8 @@ export default function Home() {
           </h1>
 
           <p className="mt-5 max-w-xl font-body text-lg leading-relaxed text-gray-700 sm:text-xl">
-            Handcrafted dirty sodas, warm cookies, and four pinball machines
-            humming all day. Come thirsty. Leave hyped.
+            Handcrafted dirty sodas, warm cookies, and enough fizz to wake up
+            the whole block. Come thirsty. Leave hyped.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -80,7 +79,6 @@ export default function Home() {
     <Menu />
     <Food />
     <Challenge />
-    <Pinball />
     <Visit />
     </>
   );

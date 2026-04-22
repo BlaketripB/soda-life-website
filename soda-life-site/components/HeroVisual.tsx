@@ -1,5 +1,5 @@
 /**
- * Hero scene — soft brand clouds + cup, cookie, and pinball (matches headline story).
+ * Hero scene — soft brand clouds + cup and cookie.
  * No outer “sticker card”; sits directly on the cream hero so it scales with the section.
  */
 export default function HeroVisual() {
@@ -25,11 +25,6 @@ export default function HeroVisual() {
             <stop offset="35%" stopColor="#ffffff" stopOpacity="0.12" />
             <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
           </linearGradient>
-          <radialGradient id="hv-ball" cx="35%" cy="35%" r="65%">
-            <stop offset="0%" stopColor="#f8fafc" />
-            <stop offset="45%" stopColor="#cbd5e1" />
-            <stop offset="100%" stopColor="#64748b" />
-          </radialGradient>
           <radialGradient id="hv-cookie" cx="40%" cy="35%" r="70%">
             <stop offset="0%" stopColor="#e8d4b8" />
             <stop offset="100%" stopColor="#b8956a" />
@@ -155,17 +150,6 @@ export default function HeroVisual() {
             strokeWidth={2}
           />
         ))}
-
-        {/* Pinball */}
-        <circle cx={352} cy={86} r={28} fill="url(#hv-ball)" stroke="#111827" strokeWidth={2.5} />
-        <ellipse cx={340} cy={74} rx={10} ry={7} fill="#ffffff" opacity={0.55} />
-        <path
-          d="M 352 58 L 354 62 L 358 62 L 355 65 L 356 70 L 352 67 L 348 70 L 349 65 L 346 62 L 350 62 Z"
-          fill="#fde047"
-          stroke="#111827"
-          strokeWidth={1}
-          strokeLinejoin="round"
-        />
 
         {/* Accent sparkles */}
         <path
