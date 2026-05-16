@@ -16,9 +16,9 @@ export default function HeroVisual() {
       >
         <defs>
           <linearGradient id="hv-cup" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#3BB5F0" />
-            <stop offset="48%" stopColor="#FF6FB5" />
-            <stop offset="100%" stopColor="#4AD66D" />
+            <stop offset="0%" stopColor="#FF1F8F" />
+            <stop offset="48%" stopColor="#2DB8E0" />
+            <stop offset="100%" stopColor="#6FCB1F" />
           </linearGradient>
           <linearGradient id="hv-cup-shine" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stopColor="#ffffff" stopOpacity="0.5" />
@@ -37,7 +37,7 @@ export default function HeroVisual() {
           cy={158}
           rx={118}
           ry={108}
-          fill="#3BB5F0"
+          fill="#2DB8E0"
           opacity={0.2}
           transform="rotate(-14 118 158)"
         />
@@ -46,7 +46,7 @@ export default function HeroVisual() {
           cy={148}
           rx={102}
           ry={94}
-          fill="#FF6FB5"
+          fill="#FF1F8F"
           opacity={0.18}
           transform="rotate(11 228 148)"
         />
@@ -55,7 +55,7 @@ export default function HeroVisual() {
           cy={178}
           rx={96}
           ry={86}
-          fill="#4AD66D"
+          fill="#6FCB1F"
           opacity={0.16}
           transform="rotate(-7 318 178)"
         />
@@ -161,7 +161,7 @@ export default function HeroVisual() {
         />
         <path
           d="M 388 198 L 391 205 L 398 208 L 391 211 L 388 218 L 385 211 L 378 208 L 385 205 Z"
-          fill="#4AD66D"
+          fill="#6FCB1F"
           stroke="#111827"
           strokeWidth={1.5}
           strokeLinejoin="round"

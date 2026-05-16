@@ -58,7 +58,7 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               href="#menu"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-gray-900 bg-gradient-to-r from-sodaBlue to-sodaPink px-6 py-3 font-body text-base font-extrabold text-gray-900 shadow-[4px_4px_0_#111827] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#111827] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-gray-900 bg-gradient-to-r from-sodaPink to-sodaBlue px-6 py-3 font-body text-base font-extrabold text-gray-900 shadow-[4px_4px_0_#111827] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#111827] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
             >
               See the Menu
               <span aria-hidden>→</span>

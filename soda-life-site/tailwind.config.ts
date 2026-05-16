@@ -29,9 +29,11 @@ const config: Config = {
       }
       return {
         ...allowed,
-        sodaGreen: "#4AD66D",
-        sodaBlue: "#3BB5F0",
-        sodaPink: "#FF6FB5",
+        sodaGreen: "#6FCB1F",
+        sodaBlue: "#2DB8E0",
+        sodaPink: "#FF1F8F",
+        sodaYellow: "#FFD600",
+        sodaCream: "#F5E8C8",
         cream: "#FFF8EC",
       };
     },

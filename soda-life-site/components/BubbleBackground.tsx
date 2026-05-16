@@ -5,17 +5,17 @@ import { createPortal } from "react-dom";
 
 /** Visible tinted glass bubbles (no red). */
 const GRADIENTS = [
-  "radial-gradient(circle at 30% 30%, rgba(244, 192, 209, 0.65), rgba(212, 83, 126, 0.22))",
-  "radial-gradient(circle at 30% 30%, rgba(181, 212, 244, 0.6), rgba(55, 138, 221, 0.2))",
-  "radial-gradient(circle at 30% 30%, rgba(250, 199, 117, 0.62), rgba(239, 159, 39, 0.22))",
-  "radial-gradient(circle at 30% 30%, rgba(192, 221, 151, 0.58), rgba(151, 196, 89, 0.2))",
+  "radial-gradient(circle at 30% 30%, #FF6FB8, #FF1F8F)",
+  "radial-gradient(circle at 30% 30%, #6DD4F0, #2DB8E0)",
+  "radial-gradient(circle at 30% 30%, #FFE266, #FFD600)",
+  "radial-gradient(circle at 30% 30%, #B8E885, #6FCB1F)",
 ] as const;
 
 const BUBBLE_GLOWS = [
-  "0 0 10px rgba(212, 83, 126, 0.35)",
-  "0 0 10px rgba(55, 138, 221, 0.35)",
-  "0 0 10px rgba(239, 159, 39, 0.35)",
-  "0 0 10px rgba(151, 196, 89, 0.35)",
+  "0 0 14px rgba(255, 31, 143, 0.18)",
+  "0 0 14px rgba(45, 184, 224, 0.18)",
+  "0 0 14px rgba(255, 214, 0, 0.18)",
+  "0 0 14px rgba(111, 203, 31, 0.18)",
 ] as const;
 
 const PORTAL_ROOT_ID = "soda-bubble-layer-root";
@@ -184,14 +184,14 @@ export default function BubbleBackground() {
             opacity: 0;
           }
           8% {
-            opacity: 0.55;
+            opacity: 0.38;
           }
           50% {
             transform: translate3d(15px, -55vh, 0);
-            opacity: 0.62;
+            opacity: 0.4;
           }
           88% {
-            opacity: 0.52;
+            opacity: 0.35;
           }
           100% {
             transform: translate3d(-10px, -120vh, 0);

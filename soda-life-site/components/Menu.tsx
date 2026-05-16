@@ -41,7 +41,7 @@ function DrinkCard({
   const chipLabel = section.label.split(" / ")[0];
   return (
     <article
-      className={`group flex min-h-[100px] h-full items-stretch gap-[14px] overflow-hidden rounded-2xl border border-gray-200 bg-white p-[14px] shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:ring-2 ${accent.hoverRing}`}
+      className={`group flex min-h-[100px] h-full items-stretch gap-[14px] overflow-hidden rounded-2xl border border-gray-200 bg-white p-[14px] shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[0_0_18px_rgba(45,184,224,0.2)] hover:ring-2 ${accent.hoverRing}`}
     >
       <div
         aria-hidden
@@ -243,7 +243,7 @@ export default function Menu() {
               }}
               className={`shrink-0 rounded-full border-2 px-4 py-1.5 font-body text-sm font-extrabold transition ${
                 active === "all"
-                  ? "border-gray-900 bg-gradient-to-r from-sodaBlue via-sodaGreen to-sodaPink text-gray-900 shadow-[3px_3px_0_#111827]"
+                  ? "border-gray-900 bg-gradient-to-r from-sodaPink via-sodaBlue to-sodaGreen text-gray-900 shadow-[3px_3px_0_#111827]"
                   : "border-gray-300 bg-white text-gray-800 hover:border-gray-900"
               }`}
             >
