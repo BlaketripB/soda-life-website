@@ -1,11 +1,12 @@
 import Link from "next/link";
 
 const links = [
-  { href: "#specials", label: "Specials" },
-  { href: "#menu", label: "Menu" },
-  { href: "#eat-it-up", label: "Eat" },
-  { href: "#challenge", label: "Challenge" },
-  { href: "#visit", label: "Visit" },
+  { href: "/#specials", label: "Specials" },
+  { href: "/#menu", label: "Menu" },
+  { href: "/build", label: "Build" },
+  { href: "/#eat-it-up", label: "Eat" },
+  { href: "/#challenge", label: "Challenge" },
+  { href: "/#visit", label: "Visit" },
 ];
 
 export default function Navbar() {
@@ -36,7 +37,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#visit"
+            href="/#visit"
             className="rounded-full border-2 border-gray-900 bg-gradient-to-r from-sodaBlue via-sodaGreen to-sodaPink px-4 py-2 font-body text-sm font-bold text-gray-900 shadow-[3px_3px_0_#111827] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[5px_5px_0_#111827]"
           >
             Order Now
@@ -45,7 +46,7 @@ export default function Navbar() {
 
         {/* Compact mobile CTA */}
         <Link
-          href="#menu"
+          href="/#menu"
           className="inline-flex items-center gap-1 rounded-full border-2 border-gray-900 bg-gradient-to-r from-sodaBlue to-sodaPink px-3 py-1.5 font-body text-xs font-extrabold text-gray-900 shadow-[3px_3px_0_#111827] sm:hidden"
         >
           Menu
