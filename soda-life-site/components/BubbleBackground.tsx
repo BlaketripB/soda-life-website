@@ -56,7 +56,7 @@ export default function BubbleBackground() {
     setMountNode(el);
 
     const next: BubbleConfig[] = [];
-    for (let i = 0; i < 26; i++) {
+    for (let i = 0; i < 12; i++) {
       next.push({
         id: i,
         leftPct: Math.random() * 100,
