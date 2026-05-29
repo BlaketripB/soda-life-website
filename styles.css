@@ -311,23 +311,6 @@ p  { line-height: 1.55; }
 .ch-perks li:first-child { border-top: none; }
 .ch-perks li::before { content: "★ "; color: var(--green-1); }
 
-/* ---------- Pinball ---------- */
-.pinball { padding: 40px 28px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-.pin-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.pin-card {
-  background: var(--white); border: 3px solid var(--ink); border-radius: var(--radius-lg);
-  padding: 18px; text-align: center; box-shadow: 6px 6px 0 var(--ink);
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.pin-card:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 var(--ink); }
-.pin-emoji {
-  display: inline-block; font-family: "Fredoka", sans-serif; font-weight: 700; letter-spacing: .1em;
-  padding: 4px 10px; border-radius: 999px; background: var(--g-rainbow); color: var(--ink);
-  margin-bottom: 10px; font-size: .8rem;
-}
-.pin-card h4 { margin: 0; font-family: "Fredoka", sans-serif; font-size: 1.1rem; }
-.pin-card p { margin: 4px 0 0; color: var(--ink-2); font-weight: 700; font-size: .9rem; }
-
 /* ---------- Visit ---------- */
 .visit { padding: 60px 28px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 .visit-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; }
@@ -370,12 +353,12 @@ p  { line-height: 1.55; }
   .hero { grid-template-columns: 1fr; padding: 30px 20px 40px; }
   .hero-art { height: 320px; }
   .cup { transform-origin: center; }
-  .special-grid, .challenge-grid, .pin-grid { grid-template-columns: repeat(2, 1fr); }
+  .special-grid, .challenge-grid { grid-template-columns: repeat(2, 1fr); }
   .visit-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 }
 @media (max-width: 560px) {
-  .special-grid, .challenge-grid, .pin-grid { grid-template-columns: 1fr; }
+  .special-grid, .challenge-grid { grid-template-columns: 1fr; }
   .menu-grid { grid-template-columns: 1fr; }
   .m-card { grid-template-columns: 96px 1fr; }
   .m-thumb { width: 96px; height: 96px; }

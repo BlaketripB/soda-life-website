@@ -22,7 +22,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Soda Life — Payson's Fizziest Spot",
   description:
-    "Dirty sodas, warm cookies, and bold fizz in Payson, Utah. Live the Soda Life.",
+    "Dirty sodas, warm cookies, and enough fizz to wake up the whole block. Payson, Utah.",
+  openGraph: {
+    title: "Soda Life — Payson's Fizziest Spot",
+    description:
+      "Dirty sodas, warm cookies, and enough fizz to wake up the whole block. Payson, Utah.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Soda Life — Payson's Fizziest Spot",
+    description:
+      "Dirty sodas, warm cookies, and enough fizz to wake up the whole block. Payson, Utah.",
+  },
 };
 
 export default function RootLayout({
