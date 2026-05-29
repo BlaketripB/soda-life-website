@@ -3,8 +3,6 @@
  *
  * To edit a drink: find its section below and tweak in place.
  * To add a drink: append a new object to the right `drinks` array.
- * To rotate specials: see components/Specials.tsx (this file is menu-only).
- *
  * `base` is the specific sub-base printed on Google Maps (e.g. "Witches
  * Brew Alani", "Coconut Redbull") when it differs from the section label.
  * `note` captures edition tags ("Presley Edition", "Lightning Edition").
@@ -325,6 +323,5 @@ export const FOOD: FoodItem[] = [
   { name: "Churro Fries" },
   { name: "Funnel Fries" },
   { name: "Mac-N-Cheese Bites" },
-  { name: "Chicken Tenders", note: "Pick 2" },
   { name: "Dipping Sauce" },
 ];

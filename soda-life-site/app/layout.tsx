@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fredoka, Inter } from "next/font/google";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BubbleBackground from "@/components/BubbleBackground";
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${fredoka.variable} ${inter.variable} scroll-smooth`}>
       <body className="bg-cream font-body text-gray-900 antialiased min-h-screen flex flex-col">
         <BubbleBackground />
+        <AnnouncementBanner />
         <Navbar />
         <main className="relative z-10 flex-1">{children}</main>
         <div className="relative z-10">

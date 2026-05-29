@@ -1,8 +1,11 @@
 const hours = [
-  { day: "Mon – Fri", time: "8:00a – 9:00p" },
-  { day: "Saturday", time: "9:00a – 9:00p" },
+  { day: "Monday – Friday", time: "8:00 AM – 8:30 PM" },
+  { day: "Saturday", time: "9:00 AM – 8:30 PM" },
   { day: "Sunday", time: "10:00a – 7:00p" },
 ];
+
+const PHONE = "(555) 555-5555";
+const PHONE_TEL = "+15555555555";
 
 const ADDRESS = "742 UT-198, unit 5 Payson, UT 84651";
 const MAP_QUERY = encodeURIComponent("742 UT-198, unit 5 Payson, UT 84651");
@@ -54,6 +57,11 @@ export default function Visit() {
               742 UT-198, unit 5
               <br />
               Payson, UT 84651
+            </p>
+            <p className="mt-2 font-body text-base font-semibold text-gray-800">
+              <a href={`tel:${PHONE_TEL}`} className="hover:text-sodaBlue">
+                {PHONE}
+              </a>
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

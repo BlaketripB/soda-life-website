@@ -1,29 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { href: "/#specials", label: "Specials" },
   { href: "/#menu", label: "Menu" },
   { href: "/build", label: "Build" },
   { href: "/#eat-it-up", label: "Eat" },
-  { href: "/#challenge", label: "Challenge" },
   { href: "/#visit", label: "Visit" },
 ];
 
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-20 border-b border-black/5 bg-cream/95">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2" aria-label="Soda Life home">
-          <span
-            aria-hidden
-            className="inline-block h-9 w-9 rounded-full bg-gradient-to-br from-sodaPink via-sodaBlue to-sodaGreen ring-2 ring-gray-900"
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2">
+        <Link href="/" className="flex items-center" aria-label="Soda Life home">
+          <Image
+            src="/sodalife-logo.png"
+            alt="Soda Life logo"
+            width={80}
+            height={80}
+            priority
+            className="-my-2 h-16 w-16 object-contain drop-shadow-sm sm:h-20 sm:w-20"
           />
-          <span className="font-heading text-2xl font-bold tracking-tight text-gray-900">
-            Soda
-            <span className="bg-gradient-to-r from-sodaPink via-sodaBlue to-sodaGreen bg-clip-text text-transparent">
-              Life
-            </span>
-          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-6 sm:flex">
