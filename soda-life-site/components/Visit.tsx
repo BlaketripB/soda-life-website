@@ -4,8 +4,8 @@ const hours = [
   { day: "Sunday", time: "10:00a – 7:00p" },
 ];
 
-const PHONE = "(555) 555-5555";
-const PHONE_TEL = "+15555555555";
+const PHONE = "(385) 899-1006";
+const PHONE_TEL = "+13858991006";
 
 const ADDRESS = "742 UT-198, unit 5 Payson, UT 84651";
 const MAP_QUERY = encodeURIComponent("742 UT-198, unit 5 Payson, UT 84651");
